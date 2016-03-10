@@ -111,7 +111,7 @@ public class RunTestAccess {
 						+ averageTimes(timeWriteReferenceReflection) + " ns");
 
 		System.out.println("Sredni czas wywolania metody: "
-				+ averageTimes(timeMethod) + "");
+				+ averageTimes(timeMethod) + " ns");
 		System.out.println("Sredni czas wywolania metody, refleksja: "
 				+ averageTimes(timeMethodReflection) + " ns");
 
