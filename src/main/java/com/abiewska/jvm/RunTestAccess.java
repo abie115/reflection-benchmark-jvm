@@ -81,39 +81,63 @@ public class RunTestAccess {
 
 	public void print() {
 		prepareTimes();
-		
+		System.out.println("Czasy w ns dla poszczegolnych testow.");
+		System.out.println("odczyt, typ prosty: " + timeReadSimple + "");
+		System.out.println("zapis, typ prosty: " + timeWriteSimple + "");
+
+		System.out.println("odczyt, typ prosty,refleksja: "
+				+ timeReadSimpleReflection + "");
+		System.out.println("zapis, typ prosty,refleksja: "
+				+ timeWriteSimpleReflection + "");
+
+		System.out.println("odczyt, typ referencyjny: " + timeReadReference
+				+ "");
+		System.out.println("zapis, typ referencyjny: " + timeWriteReference
+				+ "");
+
+		System.out.println("odczyt, typ referencyjny, refleksja: "
+				+ timeReadReferenceReflection + "");
+		System.out.println("zapis, typ referencyjny, refleksja: "
+				+ timeWriteReferenceReflection + "");
+
+		System.out.println("wywolanie metody: " + timeMethod + "");
+		System.out.println("wtwolanie metody, refleksja: "
+				+ timeMethodReflection + "");
+
+		System.out.println("\n\n30 uruchomien testu. ");
 		System.out.println("W ramach testu 10000 wywolan.");
-		
-		System.out.println("Sredni czas odczytu pole publiczne, typ prosty: "
+
+		System.out.println("Sredni czas odczytu, pole publiczne, typ prosty: "
 				+ averageTimes(timeReadSimple) + " ns");
-		System.out.println("Sredni czas zapisu pole publiczne, typ prosty: "
+		System.out.println("Sredni czas zapisu, pole publiczne, typ prosty: "
 				+ averageTimes(timeWriteSimple) + " ns");
 
 		System.out
-				.println("Sredni czas odczytu pole publiczne, typ prosty, refleksja: "
+				.println("Sredni czas odczytu, pole publiczne, typ prosty, refleksja: "
 						+ averageTimes(timeReadSimpleReflection) + " ns");
 		System.out
-				.println("Sredni czas zapisu pole publiczne, typ prosty, refleksja: "
+				.println("Sredni czas zapisu, pole publiczne, typ prosty, refleksja: "
 						+ averageTimes(timeWriteSimpleReflection) + " ns");
 
 		System.out
-				.println("Sredni czas odczytu pole publiczne, typ referencyjny: "
+				.println("Sredni czas odczytu, pole publiczne, typ referencyjny: "
 						+ averageTimes(timeReadReference) + " ns");
 		System.out
-				.println("Sredni czas zapisu pole publiczne, typ referencyjny: "
+				.println("Sredni czas zapisu, pole publiczne, typ referencyjny: "
 						+ averageTimes(timeWriteReference) + " ns");
 
 		System.out
-				.println("Sredni czas odczytu pole publiczne, typ referencyjny, refleksja: "
+				.println("Sredni czas odczytu, pole publiczne, typ referencyjny, refleksja: "
 						+ averageTimes(timeReadReferenceReflection) + " ns");
 		System.out
-				.println("Sredni czas odczytu pole publiczne, typ referencyjny, refleksja: "
+				.println("Sredni czas odczytu, pole publiczne, typ referencyjny, refleksja: "
 						+ averageTimes(timeWriteReferenceReflection) + " ns");
 
-		System.out.println("Sredni czas wywolania metody: "
+		System.out.println("Sredni czas wywolania metody publicznej: "
 				+ averageTimes(timeMethod) + " ns");
-		System.out.println("Sredni czas wywolania metody, refleksja: "
-				+ averageTimes(timeMethodReflection) + " ns");
+		System.out
+				.println("Sredni czas wywolania metody publicznej, refleksja: "
+						+ averageTimes(timeMethodReflection) + " ns");
 
 	}
 

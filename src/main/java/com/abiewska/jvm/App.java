@@ -14,7 +14,7 @@ public class App {
 		for (int i = 0; i < 30; i++) {
 			runTest.runTestAccess();
 		}
-		System.out.println("30 uruchomien testu. ");
+		
 		runTest.print();
 
 	}
